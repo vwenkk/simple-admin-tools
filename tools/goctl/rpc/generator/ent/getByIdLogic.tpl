@@ -3,14 +3,14 @@ package {{.packageName}}
 import (
 	"context"
 
-	"{{.projectPath}}/ent"
-	"{{.projectPath}}/internal/svc"
-	"{{.projectPath}}/{{.projectName}}"
+	"{{.projectPath}}/pkg/ent"
+	"{{.projectPath}}/rpc/internal/svc"
+    "{{.projectPath}}/rpc/types/{{.projectName}}"
 
-	"github.com/suyuan32/simple-admin-core/pkg/i18n"
-	"github.com/suyuan32/simple-admin-core/pkg/msg/logmsg"
-	"github.com/suyuan32/simple-admin-core/pkg/statuserr"
-{{if .useUUID}}    "github.com/suyuan32/simple-admin-core/pkg/uuidx"
+	"{{.projectPath}}/pkg/i18n"
+	"{{.projectPath}}/pkg/msg/logmsg"
+	"{{.projectPath}}/pkg/statuserr"
+{{if .useUUID}}    "{{.projectPath}}/pkg/uuidx"
 {{end}}	"github.com/zeromicro/go-zero/core/logx"
 )
 
